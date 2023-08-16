@@ -7,7 +7,7 @@ RUN npm install --unsafe-perm
 
 FROM node:14-slim
 MAINTAINER "Manojvv" "manojv@ilimi.in"
-RUN sed -i '/jessie-updates/d' /etc/apt/sources.list \
+RUN sed -i '/buster-updates/d' /etc/apt/sources.list \
     && apt update && apt install openssl imagemagick -y \
     && apt-get clean \
     && useradd -m sunbird
